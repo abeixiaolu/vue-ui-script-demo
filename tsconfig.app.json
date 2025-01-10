@@ -1,6 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
+    "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     /* Linting */
@@ -8,9 +9,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    "baseUrl": ".",
     "paths": {
-      "@/ui/*": ["src/components/ui/*"]
+      "@/ui/icons": ["src/components/ui/icons/index.ts"],
+      "@/ui/composables/*": ["src/components/ui/composables/*"],
+      "@/ui/theme/*": ["src/components/ui/theme/*"],
+      "@/ui/keys/*": ["src/components/ui/keys/*"],
+      "@/ui/utils/*": ["src/components/ui/utils/*"],
+      "@/ui/types/*": ["src/components/ui/types/*"],
+      "@/ui/*": ["src/components/ui/components/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],

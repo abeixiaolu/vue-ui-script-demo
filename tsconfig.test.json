@@ -1,9 +1,16 @@
 {
   "extends": "./tsconfig.node.json",
   "compilerOptions": {
+    "lib": ["dom"],
     "baseUrl": ".",
     "paths": {
-      "@/ui/*": ["src/components/ui/*"]
+      "@/ui/icons": ["src/components/ui/icons/index.ts"],
+      "@/ui/composables/*": ["src/components/ui/composables/*"],
+      "@/ui/theme/*": ["src/components/ui/theme/*"],
+      "@/ui/keys/*": ["src/components/ui/keys/*"],
+      "@/ui/utils/*": ["src/components/ui/utils/*"],
+      "@/ui/types/*": ["src/components/ui/types/*"],
+      "@/ui/*": ["src/components/ui/components/*"]
     }
   },
   "include": ["src/components/ui/**/*.test.ts"]
