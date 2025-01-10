@@ -47,7 +47,6 @@ export function addUiComponentByName(name) {
   );
 }
 
-// 从命令行读取 name 参数
 const name = process.argv[2];
 addUiComponentByName(name);
 
