@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/ui/*": ["src/components/ui/*"]
+    }
+  },
+  "include": ["src/components/ui/**/*.test.ts"]
+}
